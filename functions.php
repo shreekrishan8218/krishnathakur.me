@@ -93,7 +93,7 @@ if (!function_exists('valkivid_scripts_load')) {
     wp_enqueue_script('valkivid-svg-loader-script', VALKIVID_URL . '/js/svg-loader.js', [], '1.0.0', true);
     
     // App
-    wp_enqueue_script('valkivid-app-script', VALKIVID_URL . '/js/app.js', [], '1.0.0', true);
+    wp_enqueue_script('valkivid-app-script', VALKIVID_URL . '/backend/js/app.bundle.min.js', [], '1.0.0', true);
 
     // Header
     wp_enqueue_script('valkivid-header-script', VALKIVID_URL . '/js/header.js', [], '1.0.0', true);
