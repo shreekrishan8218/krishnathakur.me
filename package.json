@@ -1,0 +1,33 @@
+{
+  "name": "valkivid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "build_backend": "browserify ./backend/js/source/app.js --extension=js -t [ babelify --presets [ @babel/env @babel/preset-react ] ] -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./backend/js/app.bundle.min.js"
+  },
+  "keywords": [],
+  "author": "Odin Design Themes",
+  "license": "https://themeforest.net/licenses/",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "grunt": "^1.4.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-browserify": "^5.3.0",
+    "node-sass": "^4.14.1",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "envify": "^4.1.0",
+    "terser": "^5.3.7",
+    "uglifyify": "^5.0.2"
+  }
+}
