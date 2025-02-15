@@ -46,3 +46,32 @@ header h1 {
 .social-link:hover {
     background-color: #005bb5;
 }
+.instagram-posts {
+    margin-top: 2rem;
+}
+.instagram-posts img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem;
+    border-radius: 8px;
+}
+.quotes {
+    margin-top: 2rem;
+    background-color: #e0f7fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.quotes p {
+    font-style: italic;
+    color: #00796b;
+}
+.shayari {
+    margin-top: 2rem;
+    background-color: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.shayari p {
+    font-style: italic;
+    color: #e65100;
+}
