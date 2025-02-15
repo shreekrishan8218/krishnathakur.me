@@ -13,8 +13,7 @@ module.exports = (grunt) => {
           outputStyle: 'expanded'
         },
         files: {
-          'style.css': 'sass/main.scss',
-          'backend/css/style.css': 'backend/sass/main.scss'
+          'style.css': 'sass/main.scss'
         }
       }
     },
@@ -51,7 +50,7 @@ module.exports = (grunt) => {
       },
       build: {
         files: {
-          'backend/js/source/bundle/app.bundle.js': 'backend/js/source/app.js'
+          'backend/js/app.bundle.min.js': 'backend/js/source/app.js'
         }
       }
     },
