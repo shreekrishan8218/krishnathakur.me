@@ -15,7 +15,7 @@
   $body_type = valkivid_customizer_setting_template_type_value_get('valkivid_body_setting_type');
   $body_version = valkivid_template_type_version_get($body_type);
 
-  $page_header_title = esc_html__('Search Results', 'valkivid');
+  $page_header_title = esc_html__('Archive', 'valkivid');
 
   /**
    * Page Header
@@ -25,24 +25,10 @@
     'breadcrumbs' => valkivid_navigation_breadcrumbs_get($page_header_title)
   ]);
 
-  $search_results_text = valkivid_search_results_text_get();
-
 ?>
 
 <!-- SECTION -->
 <section class="valkivid-section valkivid-grid-limit">
-<?php
-
-  /**
-   * Search Results Header
-   */
-  get_template_part('template-part/search/search-results', 'header', [
-    'title'     => $search_results_text,
-    'modifiers' => 'valkivid-template_' . $body_version
-  ]);
-
-?>
-
 <?php if (have_posts()) : ?>
   <!-- GRID -->
   <div class="valkivid-grid valkivid-grid_4-4-4 valkivid-grid_horizontally-centered-on-mobile">
@@ -75,6 +61,14 @@
   ]);
 
 ?>
+<?php else : ?>
+  <!-- NO POSTS FOUND -->
+  <div class="valkivid-no-posts-found">
+    <h2><?php esc_html_e('No posts found', 'valkivid'); ?></h2>
+    <p><?php esc_html_e('It seems we can’t find what you’re looking for. Perhaps searching can help.', 'valkivid'); ?></p>
+    <?php get_search_form(); ?>
+  </div>
+  <!-- /NO POSTS FOUND -->
 <?php endif; ?>
 </section>
 <!-- /SECTION -->
