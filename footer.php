@@ -50,7 +50,7 @@
     /**
      * Footer Bottom
      */
-    get_template_part('template-part/footer/footer', 'bottom', $footer_bottom_options);
+    get_template_part('template-part/footer/footer-bottom', $footer_bottom_options);
   }
 
 ?>

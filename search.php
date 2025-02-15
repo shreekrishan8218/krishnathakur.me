@@ -75,6 +75,14 @@
   ]);
 
 ?>
+<?php else : ?>
+  <!-- NO POSTS FOUND -->
+  <div class="valkivid-no-posts-found">
+    <h2><?php esc_html_e('No posts found', 'valkivid'); ?></h2>
+    <p><?php esc_html_e('It seems we can’t find what you’re looking for. Perhaps searching can help.', 'valkivid'); ?></p>
+    <?php get_search_form(); ?>
+  </div>
+  <!-- /NO POSTS FOUND -->
 <?php endif; ?>
 </section>
 <!-- /SECTION -->
