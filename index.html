@@ -1,15 +1,88 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html data-bs-theme="dark" lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - KrishnaThakur</title>
-    <meta name="description" content="Welcome to my personal website!">
+    <meta name="description" content="Welcome to KrishnaThakur.me, my personal portfolio website.">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron:700,800|Inter:400,700&display=swap">
+    <style>
+        body {
+            background: #181c22;
+            color: #e6e6e6;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f2027 0%, #2c5364 50%, #1c92d2 100%);
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+        }
+        .highlight-name {
+            font-family: 'Orbitron', 'Inter', sans-serif;
+            font-size: 3rem;
+            color: #00fff7;
+            text-shadow: 0 0 14px #00fff7, 0 0 2px #0088ff;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 14px #00fff7, 0 0 2px #0088ff; }
+            to { text-shadow: 0 0 28px #00fff7, 0 0 8px #0088ff; }
+        }
+        .card {
+            background: #232733;
+            border-radius: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+            border: none;
+        }
+        .btn-glow {
+            background: linear-gradient(90deg, #0088ff 0%, #00fff7 100%);
+            color: #181c22;
+            font-weight: bold;
+            border: none;
+            box-shadow: 0 0 12px #00fff7;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-glow:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 24px #00fff7;
+            color: #fff;
+        }
+        .navbar {
+            background: #181c22 !important;
+            border-bottom: 1px solid #232733;
+        }
+        .navbar-brand span {
+            font-family: 'Orbitron', 'Inter', sans-serif;
+            font-size: 1.7rem;
+            color: #00fff7;
+            text-shadow: 0 0 8px #00fff7;
+        }
+        .footer {
+            background: #232733;
+            color: #b5caff;
+            padding: 2rem 0 1rem 0;
+            border-top: 1px solid #00fff7;
+        }
+        .footer a {
+            color: #00fff7;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark bg-dark" id="mainNav">
+    <nav class="navbar navbar-expand-md sticky-top py-3 navbar-dark">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#"><span>KrishnaThakur</span></a>
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
@@ -24,66 +97,72 @@
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
                 </ul>
-                <a class="btn btn-primary shadow" role="button" href="signup.html">Sign up</a>
+                <a class="btn btn-glow shadow" role="button" href="signup.html">Sign up</a>
             </div>
         </div>
     </nav>
-    <section class="py-5 text-center bg-light">
+    <section class="hero-bg">
         <div class="container py-5">
-            <img src="assets/img/profile.jpg" alt="Profile" class="rounded-circle mb-3" style="width:120px;height:120px;">
-            <h1 class="fw-bold">Welcome to KrishnaThakur.me</h1>
-            <p class="lead text-muted">This is my personal website where I showcase my work, services, and more.</p>
-            <a class="btn btn-primary btn-lg" href="projects.html">View My Projects</a>
+            <div class="highlight-name">Krishna Thakur</div>
+            <h2 class="fw-bold mb-3" style="color:#b5caff;">Welcome to my <span style="color:#00fff7;">Portfolio</span></h2>
+            <p class="lead mb-4" style="color:#b5caff;">Web Developer | Designer | Creator<br>Check out my work and services below!</p>
+            <a class="btn btn-glow btn-lg" href="projects.html">View My Projects</a>
         </div>
     </section>
     <section class="py-5">
         <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-4 mb-4">
-                    <h4 class="fw-bold">Services</h4>
-                    <p class="text-muted">Web design, development, hosting, and more.</p>
-                    <a class="btn btn-outline-primary" href="services.html">Learn more</a>
+            <div class="row justify-content-center text-center g-4">
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h4 class="fw-bold mb-2" style="color:#00fff7;">Services</h4>
+                        <p class="text-muted mb-3">Web design, development, hosting, and more.</p>
+                        <a class="btn btn-glow" href="services.html">Learn more</a>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="fw-bold">Projects</h4>
-                    <p class="text-muted">Check out my latest work and portfolio.</p>
-                    <a class="btn btn-outline-primary" href="projects.html">See Projects</a>
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h4 class="fw-bold mb-2" style="color:#00fff7;">Projects</h4>
+                        <p class="text-muted mb-3">Check out my latest work and portfolio.</p>
+                        <a class="btn btn-glow" href="projects.html">See Projects</a>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h4 class="fw-bold">Contact</h4>
-                    <p class="text-muted">Get in touch for collaborations or inquiries.</p>
-                    <a class="btn btn-outline-primary" href="contacts.html">Contact Me</a>
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h4 class="fw-bold mb-2" style="color:#00fff7;">Contact</h4>
+                        <p class="text-muted mb-3">Get in touch for collaborations or inquiries.</p>
+                        <a class="btn btn-glow" href="contacts.html">Contact Me</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="bg-dark mt-5">
-        <div class="container py-4 py-lg-5">
-            <div class="row justify-content-center">
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row justify-content-center mb-3">
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold text-white">Services</h3>
+                    <h6 class="fw-bold" style="color:#00fff7;">Services</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-light">Web design</a></li>
-                        <li><a href="#" class="text-light">Development</a></li>
-                        <li><a href="#" class="text-light">Hosting</a></li>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold text-white">About</h3>
+                    <h6 class="fw-bold" style="color:#00fff7;">About</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-light">Company</a></li>
-                        <li><a href="#" class="text-light">Team</a></li>
-                        <li><a href="#" class="text-light">Legacy</a></li>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Legacy</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold text-white">Careers</h3>
+                    <h6 class="fw-bold" style="color:#00fff7;">Careers</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-light">Job openings</a></li>
+                        <li><a href="#">Job openings</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="text-center mt-3 text-light">© 2025 KrishnaThakur.me</div>
+            <div class="text-center" style="color:#00fff7;">© 2025 <span style="font-family:'Orbitron',sans-serif;">KrishnaThakur.me</span></div>
         </div>
     </footer>
 </body>
